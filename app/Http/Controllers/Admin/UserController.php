@@ -55,7 +55,7 @@ class UserController extends Controller
     }
 
     //プロフィール登録内容表示（ログインユーザー分）
-    public function yourAccount(Request $request, User $user)
+    public function yourAccount(Request $request)
     {
         // Auth::user(class名：your_account)によってyour_account.blade.phpにアカウント情報を渡す
         $your_account = Auth::user();

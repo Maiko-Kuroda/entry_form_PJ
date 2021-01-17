@@ -26,8 +26,24 @@ class TemperatureController extends Controller
         $temperature = new Temperature;
         $form = $request->all();//viewからすべて受け取っている
         $temperature->fill($form);
-        // dd($request->all());
-        $temperature->save();
+        $date = date_create($request->date);
+        // dd($date);
+        // $now_date = explode(" ",$date);
+        // dd($now_date);
+        // $now_date_f = new DateTime($now_date[0]);
+        $ex_temperatures = Temperature::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
+        // $ex_date = date_create($ex_temperatures->created_at);
+        $ex_date = $ex_temperatures[0]->created_at;
+        // dd($ex_date,$date);
+        $interval = $date->diff($ex_date);
+        // dd($interval);
+        if($interval->d == 0){
+            return "本日は既にご登録済です";
+        }else{
+            $temperature->save();
+            // return "登録します";
+        }
+        
         
         return redirect('temperature/your_temperature');
        

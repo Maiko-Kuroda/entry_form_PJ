@@ -29,7 +29,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/user','Admin\UserController@yourAccount');
     Route::get('/user/index','Admin\UserController@index')->middleware('auth');
     Route::get('/user/detail','Admin\UserController@showDetail');
-    Route::get('/home','Admin\UserController@welcome');
+    Route::get('/welcome','Admin\UserController@welcome');
     Route::get('/ok','Admin\UserController@judge');
     // Route::get('/ng','Admin\UserController@judge');
     Route::get('/contact','Admin\UserController@contact');
@@ -45,5 +45,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/temperature/create', 'Admin\TemperatureController@create');
     Route::get('/temperature/your_temperature', 'Admin\TemperatureController@showMyTemper');
     Route::get('/temperature/detail', 'Admin\TemperatureController@showDetail');
+    // Route::get('/temperature/already', 'Admin\TemperatureController@create');
 
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -1,6 +1,7 @@
-@extends('layouts.account')
+@extends('layouts.user')
 @section('title', 'プロフィールの編集')
 @section('content')
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 mx-auto">
@@ -14,31 +15,31 @@
                     </ul>
                 @endif
                 <div class="form-group row" style="line-height:1.5rem;text-align:left;height:4rem">
-                    <label class="col-md-2" for="name">名前</label>
+                    <label class="col-md-4" for="name">名前</label>
                      <div class="col-md-10">
                          <input type="text" class="form-control" name="name" value="{{ $your_account->name }}">
                      </div>
                 </div>
                 <div class="form-group row" style="line-height:1.5rem;text-align:left;height:4rem">
-                    <label class="col-md-2" for="gender">性別</label>
+                    <label class="col-md-4" for="gender">性別</label>
                      <div class="col-md-10">
                          <input type="text" class="form-control" name="gender" value="{{ $your_account->gender }}">
                      </div>
                 </div>
                 <div class="form-group row" style="line-height:1.5rem;text-align:left;height:4rem">
-                    <label class="col-md-2" for="mobile_phone">連絡先（携帯電話）</label>
+                    <label class="col-md-4" for="mobile_phone">連絡先（携帯電話）</label>
                      <div class="col-md-10">
                          <input type="text" class="form-control" name="mobile_phone" value="{{ $your_account->mobile_phone }}">
                      </div>
                 </div>
                 <div class="form-group row" style="line-height:1.5rem;text-align:left;height:4rem">
-                    <label class="col-md-2" for="form-control">緊急連絡先（ご家族等）</label>
+                    <label class="col-md-6" for="form-control">緊急連絡先（ご家族等）</label>
                      <div class="col-md-10">
                          <input type="text" class="form-control" name="emergency_contact" value="{{ $your_account->emergency_contact }}">
                      </div>
                 </div>
                 <div class="form-group row" style="line-height:1.5rem;text-align:left;height:4rem">
-                    <label class="col-md-2" for="email">E-Mail アドレス</label>
+                    <label class="col-md-6" for="email">E-Mail アドレス</label>
                      <div class="col-md-10">
                          <input type="text" class="form-control" name="email" value="{{ $your_account->email }}">
                      </div>
@@ -48,7 +49,9 @@
                    <div class="col-md-10">
                        <input type="hidden" name="id" value="{{ $your_account->id }}">
                        {{ csrf_field() }}
-                       <input type="submit" class="btn btn-primary" value="更新">
+                       <input type="submit" class="button" value="更新">
+                       <input type="button" class="button" onclick="location.href='/user'"
+                            value="戻る">
                    </div>
                </div>
             </form>

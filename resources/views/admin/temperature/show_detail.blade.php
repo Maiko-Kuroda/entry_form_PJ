@@ -1,16 +1,12 @@
-@extends('layouts.base')
+@extends('layouts.temperature')
 @section('title', '参加者体温一覧')
 @section('content')
-<div class="row">
-    <div class="col-md-3 text-center " >
-        <a class="btn w-75 btn-outline-secondary" onclick="location.href='/home'" style="	box-shadow: 0px 0px 4px  black;	border-color: #f25042;">Topページへ</a>
-    </div>
-</div>
+
 
 <div class="container">
     <div class="row">
         <div class="col-md-8 mx-auto">
-            <h2 class="head_test">temperature</h2>
+            <h2>temperature</h2>
             <form action="{{action('Admin\TemperatureController@showDetail')}}" method="get">
             
                 @if (count($errors) > 0)
@@ -20,7 +16,12 @@
                     @endforeach
                 </ul>
                 @endif
-              
+                <div class="form-group row">
+                    <div class="col-md-10 ">
+                        <input type="button" class="button" onclick="location.href='/user/index'"
+                            value="戻る">
+                    </div>
+                </div>
                 @if($user->temperatures != NULL)
                     @foreach($user->temperatures as $temperature)
                         <div class="form-group row">

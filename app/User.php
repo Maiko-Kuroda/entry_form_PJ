@@ -60,15 +60,28 @@ class User extends Authenticatable
         if ($count < 2){
             return false;
         }
-        $day1 = new DateTime($temperatures[$count-1]->updated_at);
-        $day2 = new DateTime($temperatures[$count-2]->updated_at);
-        
+        // dd($temperatures[$count-1]->updated_at);
+        $d1 = explode(" ",$temperatures[$count-1]->updated_at);
+        $d2 = explode(" ",$temperatures[$count-2]->updated_at);
+        // dd($d1[0]);
+        // dd($d2[0]);
+        $day1 = new DateTime($d1[0]);
+        $day2 = new DateTime($d2[0]);
+        // dd($day1);
+        // $interval = $day2->diff($day1);
         $interval = $day1->diff($day2);
-        // dd($interval, $temperatures->max('temperature'));
-        if($interval->d == 1 && $temperatures->max('temperature') < 37.5){
+        
+        // dd($interval);
+        // $tenp_int= $temperatures->max('temperature');
+        // dd($interval);
+        // dd(intval($tenp_int), $temperatures->max('temperature'));
+        
+        if($interval->d == 1 && intval($tenp_int) < 37.5){
             return true;
         }else{
             return false;
         }
+
+
     }
 }

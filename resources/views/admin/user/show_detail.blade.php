@@ -1,10 +1,11 @@
-@extends('layouts.account')
+@extends('layouts.user')
 @section('title', 'アカウント')
 @section('content')
+
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-pb-3 mx-auto">
-            <h2 class="head_test" style="margin-top:40px; margin-bottom:50px;">プロフィール</h2>
+        <div class="col-md-8 mx-auto">
+            <h2>プロフィール</h2>
            
             <form action="{{action('Admin\UserController@showDetail')}}" method="get">
                 @if (count($errors) > 0)
@@ -37,8 +38,6 @@
                                 </div>
                             </div>
                         </div>
-                        
-                        
                         <div class="py0">
                             <div class="row">
                                 <div class="col-md-10 offset-md-1">
@@ -67,12 +66,11 @@
                             <div class="form-group row">
                                 
                                 <div class="col-md-12 offset-md-1">
-                                    <input type="button" class="mt-3" onclick="location.href='./index'"
+                                    <input type="button" class="button" onclick="location.href='./index'"
                                         value="戻る">
                                 </div>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
             </form>

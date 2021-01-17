@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('layouts.temperature')
 @section('title', '体温の登録')
 @section('content')
 <div class="container">
@@ -24,11 +24,19 @@
                 <div class="form-group row">
                     <div class="col-md-10">
                         {{ csrf_field() }}
+                        <input type="hidden" name="create_day" value="{{ $user_id }}">
                         <input type="hidden" name="user_id" value="{{ $user_id }}">
-                        <input type="submit" class="button-2" value="投稿" class="click-form">
+                        <input type="submit" class="button" value="投稿" class="click-form">
                         
                     </div>
                 </div>
+                <div class="form-group row">
+                    <div class="col-md-10">
+                        <input type="button" class="button" onclick="location.href='/user'"
+                            value="戻る">
+                    </div>
+                </div>
+                
             </form>
         </div>
     </div>
