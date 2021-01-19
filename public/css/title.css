@@ -13,7 +13,40 @@ span.label.label-danger{
     font-size: 0.8em;
 }
 
-.questionary-form-group{
-    font-size: 1em;
-    border-bottom: 1px solid #81D8D0;
+.questionary-form-group-title{
+    font-size: 1em;/* 文字の大きさ */
+    font-weight: bold;/* 文字の太さ */
+    color: #030303;/* 文字の色 */
+    border-bottom: 2px dashed #81D8D0;/* 文字下の点線の太さ・種類・カラー */
+    margin: 0 0 1.5em;
+    padding: 0.2em 0 0 1.7em;
+    position: relative;
+}
+.questionary-form-group-title:before{
+    background: #81D8D0;/* 左上四角部分の色 */
+    top: 0;/* 左上四角部分の位置 */
+    left: 0.5em;/* 左上四角部分の位置 */
+    height: 12px;/* 左上四角の大きさ */
+    width: 12px;/* 左上四角の大きさ */
+    position: absolute;
+    transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    content: "";
+}
+.questionary-form-group-title:after{
+    background:#c0c0c0;/* 左下四角部分の色 */
+    top: 0.8em;/* 左下四角部分の位置 */
+    left: 0.2em;/* 左下四角部分の位置 */
+    height: 8px;/* 左下四角の大きさ */
+    width: 8px;/* 左下四角の大きさ */
+    position: absolute;
+    transform: rotate(15deg);
+    -moz-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+    -o-transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    content: "";
 }

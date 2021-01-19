@@ -102,7 +102,7 @@ class QuestionaryController extends Controller
     {
         $user=User::find($request->id);
         $questionaries = $user->questionaries();
-        dd($questionaries);
+        // dd($questionaries);
         // $cond_temperatures = Temperature::find($request->id);←モデルでリレーションを張っているため不要
         // $questionaries = Questionary::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->first();
         return view('admin.questionary.show_detail',['user' => $user]);

@@ -32,7 +32,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-md-10">
-                        <input type="button" class="button" onclick="location.href='/user'"
+                        <input type="button" class="button" onclick="location.href='/welcome'"
                             value="戻る">
                     </div>
                 </div>

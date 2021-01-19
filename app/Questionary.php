@@ -13,6 +13,17 @@ class Questionary extends Model
         'q2' => 'required',
         'q3' => 'required',
         'q4' => 'required',
+        'q5' => 'required',
+        'q6' => 'required',
+        'q7' => 'required',
+        'q8' => 'required',
+        'q9' => 'required',
+        'q10' => 'required',
+        'q11' => 'required',
+        'q12' => 'required',
+        'q13' => 'required',
+        'q14' => 'required',
+        'q15' => 'required',
         'user_id' => 'required',
         );
         
@@ -30,7 +41,7 @@ class Questionary extends Model
     }
 
     protected $fillable = [
-        'user_id','q1','q2','q3','q4','content'
+        'user_id','q1','q2','q3','q4','q5','q6','q7','q8','q9','q10','q11','q12','q13','q14','q15','content'
     ];
 
 }

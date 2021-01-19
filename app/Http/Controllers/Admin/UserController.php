@@ -97,7 +97,7 @@ class UserController extends Controller
         $cond_user = User::find($request->id);
         $temperatures = $cond_user->temperatures->sortBy('updated_at');
         $count = $temperatures->count();
-        
+       
         $day1 = new DateTime($temperatures[$count-1]->updated_at);
         $day2 = new DateTime($temperatures[$count-2]->updated_at);
         $interval = $day1->diff($day2);

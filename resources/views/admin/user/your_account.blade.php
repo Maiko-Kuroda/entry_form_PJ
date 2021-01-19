@@ -1,10 +1,10 @@
-@extends('layouts.account')
+@extends('layouts.user')
 @section('title', 'アカウント')
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-pb-3 mx-auto">
-            <h2 class="head_test" style="margin-top:40px; margin-bottom:50px;">プロフィール</h2>
+            <h2>プロフィール</h2>
             <!-- <div class="row">
                 <div class="col-md-3 text-center ">
                     <a class="btn w-75 btn-outline-secondary" onclick="location.href='/home'"
@@ -73,20 +73,20 @@
                                 <div class="col-md-12 offset-md-1">
                                     <input type="hidden" name="id" value="{{ $your_account->id }}">
                                     {{ csrf_field() }}
-                                    <input type="button" class="" onclick="location.href='./user/edit'"
+                                    <input type="button" class="button" onclick="location.href='./user/edit'"
                                         value="編集する">
                                 </div>
 
                                 <div class="col-md-12 offset-md-1">
-                                    <input type="button" class="mt-3" onclick="location.href='./your_form'"
+                                    <input type="button" class="button" onclick="location.href='./your_form'"
                                         value="アンケート登録内容確認">
                                 </div>
                                 <div class="col-md-12 offset-md-1">
-                                    <input type="button" class="mt-3" onclick="location.href='./temperature/your_temperature'"
+                                    <input type="button" class="button" onclick="location.href='./temperature/your_temperature'"
                                         value="体温登録内容確認">
                                 </div>
                                 <div class="col-md-12 offset-md-1">
-                                    <input type="button" class="mt-3" onclick="location.href='./home'"
+                                    <input type="button" class="button" onclick="location.href='./welcome'"
                                         value="戻る">
                                 </div>
                             </div>
