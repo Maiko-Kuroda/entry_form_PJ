@@ -16,6 +16,7 @@
           <!-- <div class="card-haeder p-3 w-200 d-flex"> -->
             <div class="box-title">
                 <p class="mb-0">{{ $user->name }}</p>
+                <p class="mb-0">{{ $user->id }}</p>
                 <!-- <a href="{{ url('users/' .$user->id) }}" class="text-secondary">{{ $user->id }}</a> -->
             </div>
             <div>
@@ -27,6 +28,7 @@
           <td>
             <div>
               <label>参加：{{ $user->join_judge() ? "OK" : "NG" }}</label>
+        
             </div>
           </td>
         </div>

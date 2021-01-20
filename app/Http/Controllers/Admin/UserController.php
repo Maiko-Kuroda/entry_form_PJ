@@ -46,7 +46,8 @@ class UserController extends Controller
         $all_users = User::where('id', '<>', Auth::id())->get();
         $your_account = Auth::user();
         $user_id = $your_account->id;
-
+        // $request->session()->put('questionary_id', '1');
+        // dd($user->join_judge(), $user->join_judge(), $user->join_judge());
         // $questionary = Questionary::find($request->id);
         //一つだけ検索する場合はwhere,複数個検索する場合はwhereInを使用。
         // $questionary = Questionary::where('user_id', $user_id);

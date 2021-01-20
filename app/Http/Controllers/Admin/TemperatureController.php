@@ -29,14 +29,19 @@ class TemperatureController extends Controller
         $date = date_create($request->date);
         
         $ex_temperatures = Temperature::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
-        
+        $temperature->questionary_id=$request->session()->get('questionary_id');
         // $count=count($ex_temperatures);
         // dd($count);
         if(count($ex_temperatures) == 0){
             $temperature->save();
         }else{
             $ex_date = $ex_temperatures[0]->created_at;
+            // $ex_t = explode(" ",$ex_date);//日付だけとってきた
+            // dd($date,$ex_temperatures);
+            // $date_d = explode(" ",$date);
+            // dd($date_d[0]);
             $interval = $date->diff($ex_date);
+
             if($interval->d == 0){
                 return "本日は既にご登録済です";
             }else{

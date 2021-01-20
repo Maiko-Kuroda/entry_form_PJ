@@ -22,7 +22,7 @@
                         <!-- <input type="hidden" name="id" value="{{-- $report->id --}}"> -->
                         <!-- ↑いらない。新規投稿だったらidに紐付ける必要なし -->
                         <a href="/temperature/add" input type="button" class="button">新規投稿</a>
-                        <input type="button" class="button" onclick="location.href='/user'"
+                        <input type="button" class="button" onclick="location.href='/welcome'"
                             value="戻る">
                     </div>
                 </div>

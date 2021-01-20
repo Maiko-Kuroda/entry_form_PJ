@@ -254,6 +254,16 @@
                     <label class="questionary-form-group-title">意気込み</label><span class="label label-danger">※必須</span>
                     <textarea class="form-control" name="content" rows="3" placeholder="内容を入力してください"></textarea>
                 </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <div class="box26">
+                            <p span class="box-title"> ご確認ください </p>
+                            <h5>
+                                <p>※記入いただいた個人情報は新型コロナウイルス感染症拡大防止対策に関することのみに利用し、それ以外は 利用致しません。<br>チェックデータは1か月間保管をして、その後削除します。</p>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
                 <div class="form-group row">
                     <div class="col-md-10">
                         <button type="submit" class="button">入力内容を確認する</button>

@@ -75,6 +75,7 @@ class QuestionaryController extends Controller
         // データを保存
         $questionaries = new Questionary;
         // dd($questionaries);
+        $value = $request->session()->get('questionary_id');
         $form = $request->all();
         $questionaries->fill($form);
         // Questionary::create($request->all());
