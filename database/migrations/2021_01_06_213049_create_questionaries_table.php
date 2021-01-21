@@ -14,8 +14,8 @@ class CreateQuestionariesTable extends Migration
     public function up()
     {
         Schema::create('questionaries', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->integer('user_id');  //アンケートとユーザを接続するためのカラム
+            $table->increments('id');
+            $table->unsignedInteger('user_id');  //アンケートとユーザを接続するためのカラム
             $table->string('q1');
             $table->string('q2');
             $table->string('q3');
@@ -33,6 +33,11 @@ class CreateQuestionariesTable extends Migration
             $table->string('q15');
             $table->text('content')->nullable();
             $table->timestamps();
+            // 外部キー制約
+            // $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');//外部キー
+
+
         });
     }
 

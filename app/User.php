@@ -55,8 +55,7 @@ class User extends Authenticatable
         //体温ジャッジ
         $temperatures = $this->temperatures->sortBy('updated_at');
         //orderByかな？
-        $count = $temperatures->count();
-        //   dd($temperatures->max('temperature'));
+        // $count = $temperatures->count();
         //   dd($count);
         // if ($count < 2){
         //     return false;
@@ -79,54 +78,54 @@ class User extends Authenticatable
 
         //アンケートジャッジ
         $questionary = $this->questionaries->first();
-        // Questionaries::$fillable
+          // Questionaries::$fillable
         // dd($questionary);
         $count_an = 0;
         //  dd($questionary->q1);
 
-        if(isset($questionary->q1) == "はい"){
+        if($questionary->q1 == "はい"){
             $count_an++;
         }
-        if(isset($questionary->q2) == "はい"){
+        if($questionary->q2 == "はい"){
             $count_an++;
         }
-        if(isset($questionary->q3) == "はい"){
+        if($questionary->q3 == "はい"){
             $count_an++;
         }
-        if(isset($questionary->q4) == "はい"){
+        if($questionary->q4 == "はい"){
             $count_an++;
         }
-        if(isset($questionary->q5) == "はい"){
+        if($questionary->q5 == "はい"){
             $count_an++;
         }
-        if(isset($questionary->q6) == "はい"){
+        if($questionary->q6 == "はい"){
             $count_an++;
         }
-        if(isset($questionary->q7) == "はい"){
+        if($questionary->q7 == "はい"){
             $count_an++;
         }
-        if(isset($questionary->q8) == "はい"){
+        if($questionary->q8 == "はい"){
             $count_an++;
         }
-        if(isset($questionary->q9) == "はい"){
+        if($questionary->q9 == "はい"){
             $count_an++;
         }
-        if(isset($questionary->q10) == "はい"){
+        if($questionary->q10 == "はい"){
             $count_an++;
         }
-        if(isset($questionary->q11) == "はい"){
+        if($questionary->q11 == "はい"){
             $count_an++;
         }
-        if(isset($questionary->q12) == "はい"){
+        if($questionary->q12 == "はい"){
             $count_an++;
         }
-        if(isset($questionary->q13) == "はい"){
+        if($questionary->q13 == "はい"){
             $count_an++;
         }
-        if(isset($questionary->q14) == "はい"){
+        if($questionary->q14 == "はい"){
             $count_an++;
         }
-        if(isset($questionary->q15) == "はい"){
+        if($questionary->q15 == "はい"){
             $count_an++;
         }
         // dd($count_an);

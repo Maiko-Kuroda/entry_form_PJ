@@ -14,11 +14,17 @@ class CreateTemperaturesTable extends Migration
     public function up()
     {
         Schema::create('temperatures', function (Blueprint $table) {
-            $table->id();
-            $table->integer('user_id');
-            $table->integer('questionary_id');
+            // $table->id();
+            $table->increments('id');
+            $table->unsignedInteger('user_id');
+            // $table->unsignedInteger('questionary_id');
             $table->string('temperature');
             $table->timestamps();
+
+            // 外部キー制約
+            // $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');//外部キー
+            // $table->foreign('questionary_id')->references('id')->on('questionaries')->onDelete('cascade');//外部キー
         });
     }
 

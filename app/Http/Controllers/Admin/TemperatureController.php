@@ -29,7 +29,7 @@ class TemperatureController extends Controller
         $date = date_create($request->date);
         
         $ex_temperatures = Temperature::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
-        $temperature->questionary_id=$request->session()->get('questionary_id');
+        // $temperature->questionary_id=$request->session()->get('questionary_id');
         // $count=count($ex_temperatures);
         // dd($count);
         if(count($ex_temperatures) == 0){

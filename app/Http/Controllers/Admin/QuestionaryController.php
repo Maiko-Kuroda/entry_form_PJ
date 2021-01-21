@@ -16,6 +16,7 @@ class QuestionaryController extends Controller
     public function form()
     {
         $user_id = Auth::id();
+        
         return view('admin.questionary.form', ["user_id" => $user_id]);
     }
 
@@ -75,7 +76,7 @@ class QuestionaryController extends Controller
         // データを保存
         $questionaries = new Questionary;
         // dd($questionaries);
-        $value = $request->session()->get('questionary_id');
+        // $value = $request->session()->get('questionary_id');
         $form = $request->all();
         $questionaries->fill($form);
         // Questionary::create($request->all());
@@ -92,7 +93,6 @@ class QuestionaryController extends Controller
     {
         $user_id = Auth::id();
         // $questionaries = Questionary::all();
-        // dd($questionaries);
         $questionaries = Questionary::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->first();
         // dd($questionaries);
         return view('admin.questionary.your_form', ["questionaries" => $questionaries]);
