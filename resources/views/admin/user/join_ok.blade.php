@@ -11,7 +11,7 @@
                 <div class="col-md-12 mx-auto">
                     <div class="" > <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwLvCC1PvQ3FJ9skyBa_uOxniBP32f76bBtA&usqp=CAU" >
                         <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                            <h3 class="text-primary font-weight-bold">参加OK</h3>
+                            <h3 class="text-primary font-weight-bold mt-5 mb-0 pt-5">参加OK</h3>
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
             </ul>
             <div class="form-group row">
                 <div class="col-md-12 offset-md-1">
-                    <input type="button" class="mt-3 button" onclick="location.href='./home'"
+                    <input type="button" class="mt-3 button" onclick="location.href='/welcome'"
                     value="戻る">
                 </div>
             </div>

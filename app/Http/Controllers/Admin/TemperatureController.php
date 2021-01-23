@@ -30,8 +30,6 @@ class TemperatureController extends Controller
         $ex_temperatures = Temperature::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
         $d = $date->format('Y-m-d'); //"2021-01-23"でとれる
         
-        $ex_dp = explode(" ",$ex_temperatures[0]->updated_at);
-        $ex_d =$ex_dp[0]; //"2021-01-23"で取れる
         
         // $interval = strtotime($d)-strtotime($ex_d);
         // dd($d,$ex_d);
@@ -47,6 +45,9 @@ class TemperatureController extends Controller
         if(count($ex_temperatures) == 0){
             $temperature->save();
         }else{
+
+            $ex_dp = explode(" ",$ex_temperatures[0]->updated_at);
+            $ex_d =$ex_dp[0]; //"2021-01-23"で取れる
             $interval = strtotime($d)-strtotime($ex_d);
             if($interval == 0){
                 return "本日は既にご登録済です";

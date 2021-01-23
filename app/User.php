@@ -130,7 +130,7 @@ class User extends Authenticatable
         }
         // dd($count_an);
 
-        if($interval->d == 1 && intval($tenp_int) < 37.5 && $count_an == 15){
+        if($interval->d == 1 && $tenp_int < 37.5 && $count_an == 15){
             // if($count_an == 15){
             return true;
         }else{
