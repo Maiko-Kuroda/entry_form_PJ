@@ -266,7 +266,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-md-10">
-                        <button type="submit" class="button">入力内容を確認する</button>
+                        <button type="submit" class="button">「ご確認ください」に同意のうえ、<br>入力内容を確認する</button>
                     </div>
                 </div>
                 <div class="form-group row">

@@ -27,26 +27,31 @@ class TemperatureController extends Controller
         $form = $request->all();//viewからすべて受け取っている
         $temperature->fill($form);
         $date = date_create($request->date);
-        
         $ex_temperatures = Temperature::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->get();
-        // $temperature->questionary_id=$request->session()->get('questionary_id');
-        // $count=count($ex_temperatures);
-        // dd($count);
+        $d = $date->format('Y-m-d'); //"2021-01-23"でとれる
+        
+        $ex_dp = explode(" ",$ex_temperatures[0]->updated_at);
+        $ex_d =$ex_dp[0]; //"2021-01-23"で取れる
+        
+        // $interval = strtotime($d)-strtotime($ex_d);
+        // dd($d,$ex_d);
+        
+            $count=count($ex_temperatures);
+        
+            // $ex_t = explode(" ",$ex_temperatures);//日付だけとってきた
+            // dd($ex_t);
+            // $date_array = implode($date);
+            // $date_d = explode(" ",$date);
+            // dd($date_d[0]);
+
         if(count($ex_temperatures) == 0){
             $temperature->save();
         }else{
-            $ex_date = $ex_temperatures[0]->created_at;
-            // $ex_t = explode(" ",$ex_date);//日付だけとってきた
-            // dd($date,$ex_temperatures);
-            // $date_d = explode(" ",$date);
-            // dd($date_d[0]);
-            $interval = $date->diff($ex_date);
-
-            if($interval->d == 0){
+            $interval = strtotime($d)-strtotime($ex_d);
+            if($interval == 0){
                 return "本日は既にご登録済です";
             }else{
                 $temperature->save();
-                // return "登録します";
             }
         }
         return redirect('temperature/your_temperature');

@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('layouts.user')
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header" style="line-height:1.5rem;text-align:left;height:4rem">{{ __('〇〇マラソン　参加登録') }}</div>
+                <h2>{{ __('ニューマラソン大会　参加登録') }}</h2>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">

@@ -1,5 +1,5 @@
 @extends('layouts.questionary')
-@section('title', 'アンケート回答')
+@section('title', 'あなたのアンケート結果')
 @section('content')
 
 <div class="container">
@@ -130,7 +130,7 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-md-10">
-                        <input type="button" class="button" onclick="location.href='./user/index'"
+                        <input type="button" class="button" onclick="location.href='/user/index'"
                             value="戻る">
                     </div>
                 </div>

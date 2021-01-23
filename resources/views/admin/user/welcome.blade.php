@@ -10,11 +10,11 @@
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
                         <div class="box26">
-                            <p span class="box-title"> ご確認ください </p>
+                            <p span class="box-title"> エントリー方法 </p>
                             <ul>
-                                <li>1つめの項目</li>
-                                <li>2つめの項目</li>
-                                <li>3つめの項目</li>
+                                <li>事前アンケートをご回答ください（一度のみ）</li>
+                                <li>体温を２日連続検温し登録してください（1日1度）</li>
+                                <li>上記、基準をみたしていると「参加票」が表示されます</li>
                             </ul>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-10 offset-md-1">
-                            <a class="button" onclick="location.href='./user'">登録内容確認</a>
+                            <a class="button" onclick="location.href='./user'">登録済 内容</a>
                         </div>
                     </div>
                     <div class="row">

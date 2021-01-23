@@ -1,5 +1,5 @@
 @extends('layouts.temperature')
-@section('title', '参加者体温一覧')
+@section('title', 'あなたの体温一覧')
 @section('content')
 
 

@@ -1,5 +1,5 @@
 @extends('layouts.questionary')
-@section('title', 'アンケート回答')
+@section('title', 'あなたのアンケート結果')
 @section('content')
 
 <div class="container">
@@ -128,10 +128,24 @@
                         <p class="confirm-input">{!! nl2br(e($questionaries->first()->content)) !!}</p>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <div class="box26">
+                            <p span class="box-title"> ご確認ください </p>
+                            <h5>
+                                <p>※記入いただいた個人情報は新型コロナウイルス感染症拡大防止対策に関することのみに利用し、それ以外は 利用致しません。<br>チェックデータは1か月間保管をして、その後削除します。</p>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
                 <div class="form-group row">
                     <div class="col-md-10">
                         <input type="button" class="button" onclick="location.href='/temperature/add'"
                             value="体温登録ページへ">
+                    </div>
+                    <div class="col-md-10">
+                        <input type="button" class="button" onclick="location.href='./user'"
+                            value="プロフィールページへ">
                     </div>
                     <div class="col-md-10">
                         <input type="button" class="button" onclick="location.href='./welcome'"

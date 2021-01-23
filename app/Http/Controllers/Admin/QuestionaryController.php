@@ -16,8 +16,14 @@ class QuestionaryController extends Controller
     public function form()
     {
         $user_id = Auth::id();
+        $ex_questionaries = Questionary::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->first();
+        // dd($ex_questionaries);
+        if(is_null($ex_questionaries)){
+            return view('admin.questionary.form', ["user_id" => $user_id]);
+        }else{
+            echo "既にご登録いただいています";
+        }
         
-        return view('admin.questionary.form', ["user_id" => $user_id]);
     }
 
     //アンケート内容更新(post)
@@ -95,7 +101,12 @@ class QuestionaryController extends Controller
         // $questionaries = Questionary::all();
         $questionaries = Questionary::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->first();
         // dd($questionaries);
-        return view('admin.questionary.your_form', ["questionaries" => $questionaries]);
+        if(is_null($questionaries)){
+            echo "まだ登録がありません";
+        }else{
+            return view('admin.questionary.your_form', ["questionaries" => $questionaries]);
+        }
+        
     }
 
     //登録内容表示（ユーザー全員分）
@@ -106,8 +117,12 @@ class QuestionaryController extends Controller
         // dd($questionaries);
         // $cond_temperatures = Temperature::find($request->id);←モデルでリレーションを張っているため不要
         // $questionaries = Questionary::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->first();
-        return view('admin.questionary.show_detail',['user' => $user]);
-
+        if(is_null($questionaries)){
+            echo  "まだ登録がありません";
+        }else{
+            return view('admin.questionary.show_detail',['user' => $user]);
+        }
+        
     }
 
 
