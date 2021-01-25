@@ -104,6 +104,7 @@ class QuestionaryController extends Controller
         if(is_null($questionaries)){
             echo "まだ登録がありません";
         }else{
+            // dd($questionaries);
             return view('admin.questionary.your_form', ["questionaries" => $questionaries]);
         }
         

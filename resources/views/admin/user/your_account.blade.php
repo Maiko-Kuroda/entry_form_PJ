@@ -79,11 +79,11 @@
 
                                 <div class="col-md-12 offset-md-1">
                                     <input type="button" class="button" onclick="location.href='./your_form'"
-                                        value="アンケート登録内容確認">
+                                        value="体調管理表確認">
                                 </div>
                                 <div class="col-md-12 offset-md-1">
                                     <input type="button" class="button" onclick="location.href='./temperature/your_temperature'"
-                                        value="体温登録内容確認">
+                                        value="検温結果一覧">
                                 </div>
                                 <div class="col-md-12 offset-md-1">
                                     <input type="button" class="button" onclick="location.href='./welcome'"

@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 mx-auto">
-            <h2>参加事前アンケート</h2>
+            <h2>体調管理表</h2>
             <form action="{{action('Admin\QuestionaryController@complete')}}" method="post">
                 @csrf
                 <input type="hidden" name="user_id" value="{{ $questionaries->user_id }}">

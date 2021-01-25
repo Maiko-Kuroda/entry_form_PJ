@@ -1,11 +1,11 @@
 @extends('layouts.questionary')
-@section('title', 'アンケート回答')
+@section('title', '体調管理表入力')
 @section('content')
 
 <div class="container">
     <div class="row">
         <div class="col-md-8 mx-auto">
-            <h2>参加事前アンケート</h2>
+            <h2>体調管理表</h2>
             @if (count($errors) > 0)
             <div class="alert alert-danger">
                 <ul>

@@ -1,5 +1,5 @@
 @extends('layouts.user')
-@section('title', 'ng')
+@section('title', 'ok')
 @section('content')
 
 <!DOCTYPE html>
@@ -9,10 +9,10 @@
         <div class="container">
             <div class="row"  style="width: 100%;">
                 <div class="col-md-12 mx-auto">
-                    <div class="" > <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwLvCC1PvQ3FJ9skyBa_uOxniBP32f76bBtA&usqp=CAU" >
-                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                    <div class="" > <img class="card-img" src="image/OK.png" >
+                        <!-- <div class="card-img-overlay d-flex justify-content-center align-items-center">
                             <h3 class="text-primary font-weight-bold mt-5 mb-0 pt-5">参加OK</h3>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

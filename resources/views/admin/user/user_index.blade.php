@@ -12,17 +12,17 @@
       
         @foreach ($all_users as $user)
             
-        <div class="box26">
+        <div class="box26 mb-4 pb-2 pt-3">
           <!-- <div class="card-haeder p-3 w-200 d-flex"> -->
             <div class="box-title">
                 <p class="mb-0">{{ $user->name }}</p>
-                <p class="mb-0">{{ $user->id }}</p>
+        
                 <!-- <a href="{{ url('users/' .$user->id) }}" class="text-secondary">{{ $user->id }}</a> -->
             </div>
             <div>
               <a href="{{ action('Admin\UserController@showDetail', ['id' => $user->id]) }}">プロフィール詳細 /</a>
-              <a href="{{ action('Admin\QuestionaryController@showDetail', ['id' => $user->id]) }}">アンケート詳細 /</a>
-              <a href="{{ action('Admin\TemperatureController@showDetail', ['id' => $user->id]) }}">体温詳細</a>
+              <a href="{{ action('Admin\QuestionaryController@showDetail', ['id' => $user->id]) }}">体調管理表詳細 /</a>
+              <a href="{{ action('Admin\TemperatureController@showDetail', ['id' => $user->id]) }}">検温結果詳細</a>
             </div>
           <!-- </div> -->
           <td>

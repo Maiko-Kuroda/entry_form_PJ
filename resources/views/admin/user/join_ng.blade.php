@@ -9,14 +9,14 @@
         <div class="container">
             <div class="row ml-5"  style="width: 80%;">
                 <div class="col-md-12 mx-auto">
-                    <div class="" > <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgGKRDO4ynX42HFFhdiMWPcVUAR3NfvCPwPQ&usqp=CAU" >
-                        <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                            <h3 class="text-primary font-weight-bold  mt-4 mb-0 pt-1">参加NG</h3>
-                        </div>
+                    <div class="" > 
+                        <!-- <img class="card-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgGKRDO4ynX42HFFhdiMWPcVUAR3NfvCPwPQ&usqp=CAU" > -->
+                        <img class="logo ml-5" src="image/ng.png" alt="logo" style="width: 90%;" >
+                        <!-- <div class="card-img-overlay d-flex justify-content-center align-items-center">
+                            <h3 class="text-primary font-weight-bold  mt-0 mb-5 pt-0">参加NG</h3>
+                        </div> -->
                     </div>
-                </div>
-            </div>
-            <div>
+                    <div>
                 <h2>参加条件を満たしてません</h2>
             </div>
             <ul class="list-group list-group-flush">
@@ -33,6 +33,13 @@
                     value="戻る">
                 </div>
             </div>
+
+
+
+                </div>
+
+            </div>
+           
         </div>   
     </body>
 </form>

@@ -2,12 +2,28 @@
 @section('title', 'Welcome')
 @section('content')
 
-<form action="{{action('Admin\UserController@welcome')}}" method="get">
-    <div class="container">
+
+
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<div class="container">
         <div class="row">
             <div class="col-md-10 mx-auto">
-                <h2>Welcome</h2>
-                
+            @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ url('/welcome') }}">Home</a>
+                    @else
+                        <a href="{{ route('login') }}">ログイン</a>
+
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">参加登録</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
+            </div>   
+        </div>        
                 <div class="py0">
                     <div class="row h5 font-weight-bold">
                         <div class="col-md-10 offset-md-1">
@@ -67,7 +83,6 @@
 
             </div>
         </div>
-    </div>
-</form>
+    </div>   
 
-@endsection
+</html>@endsection

@@ -1,11 +1,11 @@
 @extends('layouts.questionary')
-@section('title', 'あなたのアンケート結果')
+@section('title', '参加者の体調管理表')
 @section('content')
 
 <div class="container">
     <div class="row">
         <div class="col-md-8 mx-auto">
-            <h2>参加事前アンケート</h2>
+            <h2>体調管理表</h2>
             <form action="{{action('Admin\QuestionaryController@showDetail')}}" method="get">
                 @csrf
                 <input type="hidden" name="q1" value="{{ $user->questionaries->first()->q1 }}">
@@ -137,4 +137,4 @@
             </form>
         </div>
     </div>
-</div>
+</div>@endsection
