@@ -1,0 +1,64 @@
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.navbar-laravel {
+    background-color: #94B89C;
+    /* background-color: #81d8d0; */
+
+}
+
+html, body {
+    /* background-color: #94B89C; */
+    background-color: #81d8d0;
+    color: #FFFFFF;
+    font-family: "Nico Moji";
+    font-weight: 250;
+    height: 100vh;
+    margin: 0;
+}
+/* 
+.full-height {
+    height: 145vh;
+} */
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+/* .top-right {
+    
+    position: absolute;
+    right: 10px;
+    top: 18px;
+} */
+
+.content {
+    text-align: center;
+}
+
+
+
+.links > a {
+    color: #FFFFFF;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 0px;
+    margin-top: 30px;
+    /* height: 130vh; */
+}
