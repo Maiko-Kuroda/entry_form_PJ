@@ -10,7 +10,7 @@
             <div class="col-md-10 mx-auto">
                 <img class="logo" src="image/ng.png" alt="logo" style="width: 90%;" >
                     
-                <div class="questionary-form-group-title mb-3">
+                <div class="questionary-form-group-title col-md-8 mx-auto">
                     <label>申し訳ございませんが、参加基準を満たしていないため、ご参加頂けません</label>  
                 </div>
             <div>
