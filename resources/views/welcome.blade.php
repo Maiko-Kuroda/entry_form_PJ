@@ -7,7 +7,7 @@
     <body>
     <div class="container">
         <div class="col-md-12 mx-auto">
-            <img class="logo" src="image/ann.png" alt="logo" style="width: 100%;" >
+            <img class="logo" src="image/ann2.png" alt="logo" style="width: 100%;" >
                 
            
         <div>
