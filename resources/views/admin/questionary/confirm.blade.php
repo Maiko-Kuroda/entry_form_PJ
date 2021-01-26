@@ -123,10 +123,13 @@
                         <p class="confirm-input ml-5 font-weight-bold">{!! nl2br(e($questionaries->q15)) !!}</p>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="questionary-form-group-title">意気込み</label>
-                    <textarea class="form-control" name="content" rows="3" placeholder="内容を入力してください"></textarea>
+                <div class="questionary-form-group mb-3">
+                    <label class="questionary-form-group-title mb-1">意気込み</label>
+                    <div class="form-group">
+                        <p class="confirm-input ml-5 font-weight-bold">{!! nl2br(e($questionaries->content)) !!}</p>
+                    </div>
                 </div>
+               
                 <div class="form-group row">
                     <div class="col-md-10 ">
                         <button type="submit" name="action" value="back" class="button">戻る</button>
