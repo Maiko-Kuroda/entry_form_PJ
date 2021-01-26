@@ -5,7 +5,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-8 mx-auto">
-    <h2>ユーザー一覧</h2>
+    <h2>参加者一覧</h2>
   
     <form action="{{action('Admin\UserController@index')}}" method="get">
       <div class="col-md-13">
