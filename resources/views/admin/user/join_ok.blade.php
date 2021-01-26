@@ -6,32 +6,21 @@
 <html>
 <form action="{{action('Admin\UserController@judge')}}" method="get">
     <body>
-        <div class="container">
-            <div class="row"  style="width: 100%;">
-                <div class="col-md-12 mx-auto">
-                    <div class="" > <img class="card-img" src="image/OK.png" >
-                        <!-- <div class="card-img-overlay d-flex justify-content-center align-items-center">
-                            <h3 class="text-primary font-weight-bold mt-5 mb-0 pt-5">参加OK</h3>
-                        </div> -->
-                    </div>
-                </div>
+    <div class="container">
+        <div class="col-md-12 mx-auto">
+            <img class="logo" src="image/OK.png" alt="logo" style="width: 90%;" >
+                
+            <div class="questionary-form-group-title col-md-8 mx-auto">
+                <label>当日受付にてこちらの画面をご提示ください</label>  
             </div>
-            <div>
-                <h2>受付にて、この画面をご提示ください</h2>
+        <div>
+        <div class="form-group row">
+            <div class="col-md-12 offset-md-1">
+                <input type="button" class="mt-3 button" onclick="location.href='/welcome'"
+                value="戻る">
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item" >、、、</li>
-                <li class="list-group-item">、、、</li>
-                <li class="list-group-item">、、、</li>
-                <li class="list-group-item">、、、</li>
-            </ul>
-            <div class="form-group row">
-                <div class="col-md-12 offset-md-1">
-                    <input type="button" class="mt-3 button" onclick="location.href='/welcome'"
-                    value="戻る">
-                </div>
-            </div>
-        </div>   
+        </div>
+    </div>     
     </body>
 </form>
 </html>@endsection

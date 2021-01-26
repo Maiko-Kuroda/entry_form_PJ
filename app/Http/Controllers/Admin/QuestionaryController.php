@@ -115,10 +115,10 @@ class QuestionaryController extends Controller
     {
         $user=User::find($request->id);
         $questionaries = $user->questionaries();
-        // dd($questionaries);
+        // $questionaries = Questionary::where('user_id', $user)->orderBy('updated_at', 'desc')->first();
+        // dd($questionaries->first());
         // $cond_temperatures = Temperature::find($request->id);←モデルでリレーションを張っているため不要
-        // $questionaries = Questionary::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->first();
-        if(is_null($questionaries)){
+        if(is_null($questionaries->first())){
             echo  "まだ登録がありません";
         }else{
             return view('admin.questionary.show_detail',['user' => $user]);
