@@ -59,14 +59,21 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-            </div>
-        </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="mt-3">
+                            <p span class="questionary-form-group-title"> 事務局連絡先 </p>
+                            <div class="contact">
+                                tell: 090-5450-1759
+                            </div>
+                            <div class="contact2">
+                                mail: new_marathon@kke.biglobe.ne.jp
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>   
     </div>
 </form>
 

@@ -3,11 +3,11 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-11">
             <div class="card">
                 <h2>{{ __('新チャレンジマラソン 参加登録') }}</h2>
 
-                <div class="card-body">
+                <!-- <div class="card-body"> -->
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -102,16 +102,25 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <div class="box26">
+                                    <p span class="box-title"> ご確認ください </p>
+                                    <h5>
+                                        <p>※記入いただいた個人情報は新型コロナウイルス感染症拡大防止対策に関することのみに利用し、それ以外は 利用致しません。<br>チェックデータは1か月間保管をして、その後削除します。</p>
+                                    </h5>
+                                </div>
+                            </div>
+                        </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="button">
-                                    {{ __('参加登録') }}
+                                    {{ __('上記に同意のうえ 参加登録') }}
                                 </button>
                             </div>
                         </div>
                     </form>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
     </div>

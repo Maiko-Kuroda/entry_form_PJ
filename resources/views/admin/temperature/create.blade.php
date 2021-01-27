@@ -16,9 +16,9 @@
                 </ul>
                 @endif
                 <div class="from-group row">
-                    <div class="col-md-5">
-                    <input time=text class="form-control temperature-textarea" name="temperature"
-                        rows="20">{{ old('temperature') }}</input>
+                    <div class="col-md-6">
+                    <input type="number" step="0.1" class="form-control temperature-textarea" name="temperature"
+                        rows="20">{{ old('temperature') }}※数値のみ入力してください<br>(例: 36.4)</input>
                     </div>
                 </div>
                 <div class="form-group row">

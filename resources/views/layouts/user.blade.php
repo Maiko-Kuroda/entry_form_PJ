@@ -35,13 +35,16 @@
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
             <nav class="navbar navbar-dark navbar-laravel">
                 
-                        
+            <div class="col-md-10 mx-auto">
+        
+        
+        </div>
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                     {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
                     @guest
-                        <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                        <li><a class="nav-link" href="{{ route('login') }}">{{ __('ログイン') }}</a></li>
                     {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
                     @else
                         <li class="nav-item dropdown">
@@ -53,7 +56,7 @@
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
                                                 document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    {{ __('ログアウト') }}
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

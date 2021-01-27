@@ -38,19 +38,7 @@
                         
                 <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
-                @if (Route::has('login'))
-                    <!-- <div class="top-right links"> -->
-                        @auth
-                            <a href="{{ url('/welcome') }}">Home</a>
-                        @else
-                            <a href="{{ route('login') }}">ログイン</a>
-
-                            @if (Route::has('register'))
-                                <a href="{{ route('register') }}">参加申込み</a>
-                            @endif
-                        @endauth
-                    <!-- </div> -->
-                @endif
+             
                 </ul>
             </nav>
             {{-- ここまでナビゲーションバー --}}
