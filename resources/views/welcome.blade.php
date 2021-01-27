@@ -13,19 +13,19 @@
             <div>
         </div>   
 
-        <div class="col-md-12 mx-auto mt-5" style="width: 250px;">
+        <div class="col-md-12 mt-3" >
             <h5>
                 @if (Route::has('login'))
-                    <!-- <div class="top-right links"> -->
+                    <div class="top-right links">
                         @auth
                             <a href="{{ url('/welcome') }}">Home</a>
                         @else
                             @if (Route::has('register'))
-                                <a href="{{ route('register') }}">新規登録 /  </a>
+                                <a href="{{ route('register') }}">新規登録</a>
                             @endif
                             <a href="{{ route('login') }}">ログイン</a>
                         @endauth
-                    <!-- </div> -->
+                    </div>
                 @endif
             </h5>
         </div>

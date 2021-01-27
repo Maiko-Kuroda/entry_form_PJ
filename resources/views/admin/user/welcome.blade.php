@@ -29,11 +29,11 @@
                             <a class="button" onclick="location.href='./user'">登録済 内容</a>
                         </div>
                     </div>
-                    <div class="row">
+                    <!-- <div class="row">
                         <div class="col-md-10 offset-md-1">
                             <a class="button" onclick="location.href='./contact'">事務局連絡先</a>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="row">
                     <div class="col-md-12">

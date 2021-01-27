@@ -95,7 +95,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row" style="line-height:1.5rem;text-align:left;height:3.7rem">
+                        <div class="form-group row mt-5" style="line-height:1.5rem;text-align:left;height:4rem">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('パスワード（確認用）') }}</label>
 
                             <div class="col-md-6">
