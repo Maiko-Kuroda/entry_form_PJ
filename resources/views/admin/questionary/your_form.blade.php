@@ -140,8 +140,9 @@
                 </div>
                 <div class="form-group row">
                     <div class="col-md-10">
+                        ⬅️このまま検温入力する場合はこちら
                         <input type="button" class="button" onclick="location.href='/temperature/add'"
-                            value="体温登録ページへ">
+                            value="検温入力ページへ">
                     </div>
                     <div class="col-md-10">
                         <input type="button" class="button" onclick="location.href='./user'"

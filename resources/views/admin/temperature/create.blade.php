@@ -16,9 +16,15 @@
                 </ul>
                 @endif
                 <div class="from-group row">
-                    <div class="col-md-6">
-                    <input type="number" step="0.1" class="form-control temperature-textarea" name="temperature"
-                        rows="20">{{ old('temperature') }}※数値のみ入力してください<br>(例: 36.4)</input>
+                    <div class="col-md-3">
+                        <input type="number" step="0.1" class="form-control temperature-textarea" name="temperature"
+                            rows="20">{{ old('temperature') }}
+                        </input>
+                    </div>
+                    <div class="col-md-7">
+                        <!-- <h5> -->
+                            ※小数点1桁までの半角数字でご入力ください<br>(例: 36.4)
+                        <!-- </h5> -->
                     </div>
                 </div>
                 <div class="form-group row">
