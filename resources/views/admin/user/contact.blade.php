@@ -7,6 +7,7 @@
     <div class="col-md-10 mx-auto">
       <h2>事務局連絡先</h2>
       <ul class="list-group list-group-flush mx-auto" style="width: 80%;">
+        <li class="list-group-item" >代表: 若林有美</li>
         <li class="list-group-item" >tell: 090-5450-1759</li>
         <li class="list-group-item">mail: new_marathon@kke.biglobe.ne.jp</li>
         <li class="list-group-item"></li>

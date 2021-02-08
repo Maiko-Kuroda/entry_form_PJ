@@ -31,7 +31,7 @@
                     
                 </div>
                 <div class="questionary-form-group ml-5">
-                    <label>A_平熱を超える発熱はありません</label>
+                    <label>A_37.5度を超える発熱はありません</label>
                     <div class="form-group">
                         <p class="confirm-input ml-3 font-weight-bold">{!! nl2br(e($user->questionaries->first()->q1)) !!}</p>
                     </div>
@@ -61,7 +61,7 @@
                     </div>
                 </div>
                 <div class="questionary-form-group ml-5">
-                    <label>F_新型コロナウイルス感染症陽性とされた者と濃厚接触はありません</label>
+                    <label>F_新型コロナウイルス感染症陽性と診断された者と濃厚接触はありません</label>
                     <div class="form-group">
                         <p class="confirm-input ml-3 font-weight-bold">{!! nl2br(e($user->questionaries->first()->q6)) !!}</p>
                     </div>
@@ -73,14 +73,14 @@
                     </div>
                 </div>
                 <div class="questionary-form-group ml-5">
-                    <label>H_過去14日以内に政府から入国制限、入国後の観察期間を必要とされている国、<br>地域と等への渡航又は当該在住者との濃厚接触はありません</label>
+                    <label>H_過去14日以内に政府から入国制限、入国後の観察期間を必要とされている国、<br>地域等への渡航又は当該在住者との濃厚接触はありません</label>
                     <div class="form-group">
                         <p class="confirm-input ml-3 font-weight-bold">{!! nl2br(e($user->questionaries->first()->q8)) !!}</p>
                     </div>
                 </div>
                 <div class="questionary-form-group mb-3">
                     <label class="questionary-form-group-title mb-1">② マスクやフェイスカバー等を持参している</label>
-                    <h6 class="ml-4 mb-2">(受付時や着替え時のスポースを行っていない時や会話をする際にはマスクを着用する)</h6>
+                    <h6 class="ml-4 mb-2">(受付時や着替え時のスポーツを行っていない時や会話をする際にはマスクを着用する)</h6>
                     <div class="form-group">
                         <p class="confirm-input ml-5 font-weight-bold">{!! nl2br(e($user->questionaries->first()->q9)) !!}</p>
                     </div>
@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <div class="questionary-form-group mb-3">
-                    <label class="questionary-form-group-title mb-1">④ 他の利用者、施設管理スタッフとの距離(少なくとも2m以上)を確保します</label>
+                    <label class="questionary-form-group-title mb-1">④ 他の利用者、スタッフとの距離(少なくとも2m以上)を確保します</label>
                     <div class="form-group">
                         <p class="confirm-input ml-5 font-weight-bold">{!! nl2br(e($user->questionaries->first()->q11)) !!}</p>
                     </div>
@@ -105,7 +105,7 @@
                     </div>
                 </div>
                 <div class="questionary-form-group mb-3">
-                    <label class="questionary-form-group-title mb-1">⑥ 利用中や利用後のミーティング等においても、三つの蜜を避けます</label>
+                    <label class="questionary-form-group-title mb-1">⑥ イベント中やイベント終了後のミーティング等においても、三つの密を避けます</label>
                     <div class="form-group">
                         <p class="confirm-input ml-5 font-weight-bold">{!! nl2br(e($user->questionaries->first()->q13)) !!}</p>
                     </div>
@@ -117,13 +117,13 @@
                     </div>
                 </div>
                 <div class="questionary-form-group mb-3">
-                    <label class="questionary-form-group-title mb-1">⑧ 利用後2週間以内に新型コロナウイルス感染症を発症した場合は、<br>イベント管理者に 対して、速やかに濃厚接触者の有無について報告します</label>
+                    <label class="questionary-form-group-title mb-1">⑧ イベント終了後2週間以内に新型コロナウイルス感染症を発症した場合は、<br>イベント管理者に 対して、速やかに濃厚接触者の有無について報告します</label>
                     <div class="form-group">
                         <p class="confirm-input ml-5 font-weight-bold">{!! nl2br(e($user->questionaries->first()->q15)) !!}</p>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="questionary-form-group-title">意気込み</label>
+                    <label class="questionary-form-group-title">検温入力</label>
                     <div class="form-group">
                         <p class="confirm-input">{!! nl2br(e($user->questionaries->first()->content)) !!}</p>
                     </div>

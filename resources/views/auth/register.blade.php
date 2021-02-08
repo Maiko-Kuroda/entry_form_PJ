@@ -102,7 +102,7 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-md-10 offset-md-1">
                                 <div class="box26">
                                     <p span class="box-title"> ご確認ください </p>
@@ -111,11 +111,17 @@
                                     </h5>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
+                        <div class="row">
+                        
+                    </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
+                                <div class="col-md-10 offset-md-1">
+                                    <a class="button" onclick="location.href='./PrivacyPolicy'">プライバシーポリシーはこちら</a>
+                                </div>
                                 <button type="submit" class="button">
-                                    {{ __('上記に同意のうえ 参加登録') }}
+                                    {{ __('プライバシーポリシーに同意のうえ 参加登録') }}
                                 </button>
                             </div>
                         </div>

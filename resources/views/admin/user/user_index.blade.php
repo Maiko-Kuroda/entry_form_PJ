@@ -21,8 +21,8 @@
             </div>
             <div>
               <a href="{{ action('Admin\UserController@showDetail', ['id' => $user->id]) }}">プロフィール詳細 /</a>
-              <a href="{{ action('Admin\QuestionaryController@showDetail', ['id' => $user->id]) }}">体調管理表詳細 /</a>
-              <a href="{{ action('Admin\TemperatureController@showDetail', ['id' => $user->id]) }}">検温結果詳細</a>
+              <a href="{{ action('Admin\QuestionaryController@showDetail', ['id' => $user->id]) }}">体調管理表詳細 </a>
+              <!-- <a href="{{ action('Admin\TemperatureController@showDetail', ['id' => $user->id]) }}">検温結果詳細</a> -->
             </div>
           <!-- </div> -->
           <td>

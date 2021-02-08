@@ -21,12 +21,12 @@
                     </div>
                     <div class="row">
                         <div class="col-md-10 offset-md-1">
-                            <a class="button" onclick="location.href='./temperature/add'">検温入力</a>
+                            <a class="button" onclick="location.href='./user'">マイページ</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-10 offset-md-1">
-                            <a class="button" onclick="location.href='./user'">マイページ</a>
+                            <a class="button" onclick="location.href='./PrivacyPolicy'">プライバシーポリシー</a>
                         </div>
                     </div>
                     <div class="row">

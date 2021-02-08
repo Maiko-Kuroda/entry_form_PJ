@@ -24,13 +24,13 @@ class UserController extends Controller
     // post
     public function update(Request $request)
     {
-        // $this->validate($request, User::$rules); ←使うなら$rulesを定義する必要
+        
         $user = Auth::user();
+        // dd($request);
         $account_form = $request->all();
         unset($account_form['_token']);
         // ↓　fillでフォームから受け取ったデータをユーザーに埋め込む（設定）し保存
         $user->fill($account_form)->save();
-        // return redirect('/user/edit')
         return redirect('user');
     }
     public function __construct()
@@ -80,8 +80,13 @@ class UserController extends Controller
     //コンタクト画面
     public function contact(Request $request)
     {
-       
         return view('admin.user.contact');
+    }
+
+    //プラポリ画面
+    public function privacy_policy(Request $request)
+    {
+        return view('admin.user.privacy_policy');
     }
 
     public function judge(Request $request)

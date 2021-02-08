@@ -23,7 +23,6 @@ class QuestionaryController extends Controller
         }else{
             echo "既にご登録いただいています";
         }
-        
     }
 
     //アンケート内容更新(post)
@@ -36,6 +35,11 @@ class QuestionaryController extends Controller
         $messages = [
             'radio.required' => 'チェックを入れてください',
         ];
+
+        // $request->validate([
+        //     'q1'     => 'required',
+           
+        // ]);
 
         $validator = Validator::make($request->all(), $messages);
 
@@ -50,16 +54,6 @@ class QuestionaryController extends Controller
         // dd($questionaries);
         $form = $request->all();
         $questionaries->fill($form);
-        
-       
-        // dd($inputs);
-        // // 配列から文字列に
-        // $radio = '';
-        // if (isset($request->radio)) {
-        //     $radio = implode("\n",$request->radio);
-        // }
-
-        //入力内容確認ページのviewに変数を渡して表示
         return view('admin.questionary.confirm',["questionaries" => $questionaries]);
     }
 
@@ -69,7 +63,6 @@ class QuestionaryController extends Controller
         // dd($request);
         // $input = $request->except('action');
 
-        
         if ($request->action === 'back') {
             return redirect()->action('Admin\QuestionaryController@form')->withInput($input);
         }
@@ -90,9 +83,32 @@ class QuestionaryController extends Controller
 
         // 二重送信防止
         $request->session()->regenerateToken();
-
         return view('admin.user.welcome');
     }
+
+    //コンテンツ編集画面
+    public function edit()
+    {
+        // controllerファイルからbladeファイル へユーザー情報を渡す
+        // Auth::user();でログイン中のユーザー情報を取得できる。
+        $user_id = Auth::id();
+        $questionaries = Questionary::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->first();
+        $content = Questionary::where('user_id', Auth::id())->first();
+        // dd($your_form);
+        return view('admin.questionary.edit', ["questionaries" => $questionaries,'content' => $content]);
+    }
+    //コンテンツ編集更新
+    public function update(Request $request)
+    {
+        $questionary = Questionary::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->first();
+        $questionaries= $request->all();
+        unset($questionaries['_token']);
+        // ↓fillでフォームから受け取ったデータをユーザーに埋め込む（設定）し保存
+        // dd($your_form);
+        $questionary->fill($questionaries)->save();
+        return redirect('your_form');
+    }
+
 
     //ユーザーのアンケート登録内容表示(get)
     public function yourForm()
@@ -107,10 +123,9 @@ class QuestionaryController extends Controller
             // dd($questionaries);
             return view('admin.questionary.your_form', ["questionaries" => $questionaries]);
         }
-        
     }
 
-    //登録内容表示（ユーザー全員分）
+    //登録内容表示（ユーザー全員分)
     public function showDetail(Request $request)
     {
         $user=User::find($request->id);
@@ -123,9 +138,6 @@ class QuestionaryController extends Controller
         }else{
             return view('admin.questionary.show_detail',['user' => $user]);
         }
-        
     }
-
-
 
 }

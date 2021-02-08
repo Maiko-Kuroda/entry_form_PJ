@@ -31,16 +31,17 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/user/detail','Admin\UserController@showDetail');
     Route::get('/welcome','Admin\UserController@welcome');
     Route::get('/ok','Admin\UserController@judge');
-    // Route::get('/ng','Admin\UserController@judge');
     Route::get('/contact','Admin\UserController@contact');
+  
 
     //アンケート関連
     Route::get('/form', 'Admin\QuestionaryController@form')->name('form');
     Route::post('/confirm', 'Admin\QuestionaryController@confirm')->name('confirm');
+    Route::get('/edit', 'Admin\QuestionaryController@edit')->name('contentEdit');
+    Route::post('/update', 'Admin\QuestionaryController@update')->name('update');
     Route::post('/complete', 'Admin\QuestionaryController@complete')->name('complete');
     Route::get('/your_form', 'Admin\QuestionaryController@yourForm')->name('yourForm');
     Route::get('/Questionary/detail', 'Admin\QuestionaryController@showDetail');
-
     Route::get('/temperature/add', 'Admin\TemperatureController@add');
     Route::post('/temperature/create', 'Admin\TemperatureController@create');
     Route::get('/temperature/your_temperature', 'Admin\TemperatureController@showMyTemper');
@@ -48,7 +49,7 @@ Route::group(['middleware' => 'auth'], function () {
     // Route::get('/temperature/already', 'Admin\TemperatureController@create');
 
 });
-
+Route::get('/PrivacyPolicy','PpController@privacy_policy');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

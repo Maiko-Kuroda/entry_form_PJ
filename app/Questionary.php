@@ -1,7 +1,6 @@
 <?php
 
 namespace App;
-
 use Illuminate\Database\Eloquent\Model;
 
 class Questionary extends Model
@@ -24,6 +23,7 @@ class Questionary extends Model
         'q13' => 'required',
         'q14' => 'required',
         'q15' => 'required',
+        'content' => 'required',
         'user_id' => 'required',
         );
         
