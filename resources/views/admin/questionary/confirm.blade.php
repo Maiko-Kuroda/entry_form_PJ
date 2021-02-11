@@ -94,7 +94,7 @@
                     </div>
                 </div>
                 <div class="questionary-form-group mb-3">
-                    <label class="questionary-form-group-title mb-1">④ 他の利用者、スタッフとの距離(少なくとも2m以上)を確保します</label>
+                    <label class="questionary-form-group-title mb-1">④ 他の参加者、スタッフとの距離(少なくとも2m以上)を確保します</label>
                     <div class="form-group">
                         <p class="confirm-input ml-5 font-weight-bold">{!! nl2br(e($questionaries->q11)) !!}</p>
                     </div>
@@ -132,7 +132,8 @@
                
                 <div class="form-group row">
                     <div class="col-md-10 ">
-                        <button type="submit" name="action" value="back" class="button">戻る</button>
+                        <input type="button" class="button" onclick="location.href='/form'"
+                            value="戻る">
                         <button type="submit" name="action" value="{{ $questionaries->id }}" class="button">送信</button>
                     </div>
                 </div>

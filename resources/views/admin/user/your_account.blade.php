@@ -81,10 +81,10 @@
                                     <input type="button" class="button" onclick="location.href='./your_form'"
                                         value="体調管理表確認">
                                 </div>
-                                <div class="col-md-12 offset-md-1">
+                                <!-- <div class="col-md-12 offset-md-1">
                                     <input type="button" class="button" onclick="location.href='./temperature/your_temperature'"
                                         value="検温結果一覧">
-                                </div>
+                                </div> -->
                                 <div class="col-md-12 offset-md-1">
                                     <input type="button" class="button" onclick="location.href='./welcome'"
                                         value="戻る">

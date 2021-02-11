@@ -93,7 +93,7 @@
                     </div>
                 </div>
                 <div class="questionary-form-group mb-3">
-                    <label class="questionary-form-group-title mb-1">④ 他の利用者、スタッフとの距離(少なくとも2m以上)を確保します</label>
+                    <label class="questionary-form-group-title mb-1">④ 他の参加者、スタッフとの距離(少なくとも2m以上)を確保します</label>
                     <div class="form-group">
                         <p class="confirm-input ml-5 font-weight-bold">{!! nl2br(e($user->questionaries->first()->q11)) !!}</p>
                     </div>

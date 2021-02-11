@@ -16,6 +16,7 @@
             </div>
             @endif
             <form action="{{action('Admin\QuestionaryController@confirm')}}" method="post" id="questions">
+            <!-- <form action="{{action('Admin\QuestionaryController@complete')}}" method="post" id="questions"> -->
                 <!-- <dl> -->
                 <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                 <input type="hidden" name="user_id" value="{{ $user_id }}">
@@ -25,9 +26,7 @@
          
                 <div class="questionary-form-group ml-5">
                     <label>A_37.5℃以上の発熱はありません</label>
-                    <!-- <dt>A_37.5℃以上の発熱はありません</dt> -->
                     <div class="row ">
-                        <!-- <p class='error' style="display:none;" id="q1error">選択してください</p> -->
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
                                 <input class="form-check-input validate" type="radio" name="q1" value="はい">はい
@@ -183,7 +182,7 @@
                     </div>
                 </div>
                 <div class="questionary-form-group mb-3">
-                    <label class="questionary-form-group-title mb-1">④ 他の利用者、スタッフとの距離(少なくとも2m以上)を確保します</label><span class="label label-danger">※必須</span>
+                    <label class="questionary-form-group-title mb-1">④ 他の参加者、スタッフとの距離(少なくとも2m以上)を確保します</label><span class="label label-danger">※必須</span>
                     <div class="row">
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
@@ -277,6 +276,7 @@
                 <div class="form-group row">
                     <div class="col-md-10">
                         <button type="submit" class="button" id="submit">入力内容の確認</button>
+                        
                     </div>
                 </div>
                 <div class="form-group row">

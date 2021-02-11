@@ -17,6 +17,7 @@ class QuestionaryController extends Controller
     {
         $user_id = Auth::id();
         $ex_questionaries = Questionary::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->first();
+        // $questionaries = Questionary::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->first();
         // dd($ex_questionaries);
         if(is_null($ex_questionaries)){
             return view('admin.questionary.form', ["user_id" => $user_id]);
