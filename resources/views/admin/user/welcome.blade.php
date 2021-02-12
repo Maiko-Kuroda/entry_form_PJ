@@ -11,7 +11,10 @@
                 <div class="py0">
                     <div class="row h5 font-weight-bold">
                         <div class="col-md-10 offset-md-1">
-                            <a href="{{ action('Admin\UserController@judge') }}">参加票はこちら</a>
+                            <a href="{{ action('Admin\UserController@judge') }}" style="font-size:17pt;font-weight:bold;">参加票</a>
+                        </div>
+                        <div class="col-md-10 offset-md-1">
+                            <h6>↑表示するにはこちらをクリック</h6>
                         </div>
                     </div>
                     <div class="row">
@@ -63,6 +66,9 @@
                     <div class="col-md-12">
                         <div class="mt-3">
                             <p span class="questionary-form-group-title"> 事務局連絡先 </p>
+                            <div class="contact">
+                                代表: 若林有美
+                            </div>
                             <div class="contact">
                                 tell: 090-5450-1759
                             </div>
