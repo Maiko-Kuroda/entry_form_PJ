@@ -129,7 +129,7 @@
                         <input type="hidden" name="id" value="{{ $questionaries->id }}">
                        
                         <input type="button" class="button" onclick="location.href='/edit'"
-                            value="体温編集">
+                            value="編集">
                             {{ csrf_field() }}
                     </div>
                    

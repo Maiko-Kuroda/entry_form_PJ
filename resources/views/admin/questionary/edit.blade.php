@@ -253,13 +253,12 @@
                 <div class="questionary-form-group mb-3">
                     <label class="questionary-form-group-title" for="content">体温</label>
                     <div class="col-md-3">
-                        <input type="number" step="0.1" class="form-control" name="content" value="{{ $content ->content }}">
+                        <input type="number" step="0.1" class="form-control" name="content" value="{{ $questionaries -> content }}">
                     </div>
                     <div class="col-md-7">
                         ※小数点1桁までの半角数字でご入力ください<br>(例: 36.4)
                     </div>
                 </div>
-                
 
                <div class="form-group row">
                    <div class="col-md-3">

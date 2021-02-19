@@ -13,14 +13,18 @@ use Illuminate\Support\Facades\DB;
 class QuestionaryController extends Controller
 {
     //アンケート画面表示(get)
-    public function form()
+    public function form(Request $request)
     {
         $user_id = Auth::id();
         $ex_questionaries = Questionary::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->first();
         // $questionaries = Questionary::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->first();
         // dd($ex_questionaries);
         if(is_null($ex_questionaries)){
-            return view('admin.questionary.form', ["user_id" => $user_id]);
+            if($request){
+                return view('admin.questionary.form', ["user_id" => $user_id, "data" => $request]);
+            }else{
+                return view('admin.questionary.form', ["user_id" => $user_id]);
+            }
         }else{
             echo "既にご登録いただいています";
         }
@@ -93,10 +97,11 @@ class QuestionaryController extends Controller
         // controllerファイルからbladeファイル へユーザー情報を渡す
         // Auth::user();でログイン中のユーザー情報を取得できる。
         $user_id = Auth::id();
-        $questionaries = Questionary::where('user_id', Auth::id())->orderBy('updated_at', 'desc')->first();
-        $content = Questionary::where('user_id', Auth::id())->first();
-        // dd($your_form);
-        return view('admin.questionary.edit', ["questionaries" => $questionaries,'content' => $content]);
+        // $user_id = 6;
+        $questionaries = Questionary::where('user_id', $user_id)->orderBy('updated_at', 'desc')->first();
+        // $content = Questionary::where('user_id', Auth::id())->first();
+        // dd(Questionary::where('user_id', $user_id));
+        return view('admin.questionary.edit', ["questionaries" => $questionaries]);
     }
     //コンテンツ編集更新
     public function update(Request $request)

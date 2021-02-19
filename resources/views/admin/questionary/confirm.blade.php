@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-md-8 mx-auto">
             <h2>体調管理表</h2>
-            <form action="{{action('Admin\QuestionaryController@complete')}}" method="post">
+            <form action="{{action('Admin\QuestionaryController@complete')}}" method="post" name="confirm_form">
                 @csrf
                 <input type="hidden" name="user_id" value="{{ $questionaries->user_id }}">
                 <input type="hidden" name="q1" value="{{ $questionaries->q1 }}">
@@ -132,12 +132,14 @@
                
                 <div class="form-group row">
                     <div class="col-md-10 ">
-                        <input type="button" class="button" onclick="location.href='/form'"
-                            value="戻る">
-                        <button type="submit" name="action" value="{{ $questionaries->id }}" class="button">送信</button>
+                        <input type="button" class="button" 
+                            onclick="document.confirm_form.action = '/form';document.confirm_form.method='GET';document.confirm_form.submit();"
+                            value="内容を修正する">
+                        <button type="submit" name="action" value="{{ $questionaries->id }}" class="button">確定</button>
                     </div>
                 </div>
             </form>
+            @endsection
         </div>
     </div>
 </div>

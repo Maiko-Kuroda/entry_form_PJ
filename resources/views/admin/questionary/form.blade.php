@@ -15,9 +15,8 @@
                 </ul>
             </div>
             @endif
-            <form action="{{action('Admin\QuestionaryController@confirm')}}" method="post" id="questions">
-            <!-- <form action="{{action('Admin\QuestionaryController@complete')}}" method="post" id="questions"> -->
-                <!-- <dl> -->
+            <form action="{{action('Admin\QuestionaryController@confirm')}}" method="post" id="questions" >
+            
                 <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
                 <input type="hidden" name="user_id" value="{{ $user_id }}">
                 <div class="questionary-form-group-title mb-3">
@@ -26,18 +25,28 @@
          
                 <div class="questionary-form-group ml-5">
                     <label>A_37.5℃以上の発熱はありません</label>
-                    <div class="row ">
+                    
+                    <div class="row " >
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input validate" type="radio" name="q1" value="はい">はい
+                                <input class="form-check-input validate" type="radio" name="q1" value="はい" 
+                                    <?php if($data && $data->q1 == "はい"){
+                                        echo("checked");
+                                    }
+                                    ?>>はい
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input " type="radio" name="q1" value="いいえ">いいえ
+                                <input class="form-check-input " type="radio" name="q1" value="いいえ" 
+                                <?php if($data && $data->q1 == "いいえ"){
+                                        echo("checked");
+                                    }
+                                 ?>>いいえ
                             </label>
                         </div>
                     </div>
+                   
                 </div>
                 
         
@@ -48,12 +57,21 @@
                     
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input validate required" type="radio" name="q2" value="はい">はい
+                                <input class="form-check-input validate required" type="radio" name="q2" value="はい"
+                                    <?php if($data && $data->q2 == "はい"){
+                                        echo("checked");
+                                    }
+                                    ?>>はい
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q2" value="いいえ">いいえ
+                                <input class="form-check-input" type="radio" name="q2" value="いいえ"
+                                <?php if($data && $data->q2 == "いいえ"){
+                                        echo("checked");
+                                    }
+                                ?>
+                                >いいえ
                             </label>
                         </div>
                     
@@ -64,12 +82,21 @@
                     <div class="row">
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input validate required" type="radio" name="q3" value="はい">はい
+                                <input class="form-check-input validate required" type="radio" name="q3" value="はい"
+                                    <?php if($data && $data->q3 == "はい"){
+                                        echo("checked");
+                                    }
+                                    ?>>はい
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q3" value="いいえ">いいえ
+                                <input class="form-check-input" type="radio" name="q3" value="いいえ"
+                                <?php if($data && $data->q3 == "いいえ"){
+                                        echo("checked");
+                                    }
+                                ?>
+                                >いいえ
                             </label>
                         </div>
                     </div>
@@ -79,12 +106,20 @@
                     <div class="row">
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q4" value="はい">はい
+                                <input class="form-check-input" type="radio" name="q4" value="はい"
+                                    <?php if($data && $data->q4 == "はい"){
+                                        echo("checked");
+                                    }
+                                    ?>>はい
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q4" value="いいえ">いいえ
+                                <input class="form-check-input" type="radio" name="q4" value="いいえ"
+                                    <?php if($data && $data->q4 == "いいえ"){
+                                        echo("checked");
+                                    }
+                                    ?>>いいえ
                             </label>
                         </div>
                     </div>
@@ -94,12 +129,20 @@
                     <div class="row">
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q5" value="はい">はい
+                                <input class="form-check-input" type="radio" name="q5" value="はい"
+                                    <?php if($data && $data->q5 == "はい"){
+                                        echo("checked");
+                                    }
+                                    ?>>はい
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q5" value="いいえ">いいえ
+                                <input class="form-check-input" type="radio" name="q5" value="いいえ"
+                                    <?php if($data && $data->q5 == "いいえ"){
+                                        echo("checked");
+                                    }
+                                    ?>>いいえ
                             </label>
                         </div>
                     </div>
@@ -109,12 +152,20 @@
                     <div class="row">
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q6" value="はい">はい
+                                <input class="form-check-input" type="radio" name="q6" value="はい"
+                                    <?php if($data && $data->q6 == "はい"){
+                                        echo("checked");
+                                    }
+                                    ?>>はい
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q6" value="いいえ">いいえ
+                                <input class="form-check-input" type="radio" name="q6" value="いいえ"
+                                    <?php if($data && $data->q6 == "いいえ"){
+                                        echo("checked");
+                                    }
+                                    ?>>いいえ
                             </label>
                         </div>
                     </div>
@@ -124,12 +175,20 @@
                     <div class="row">
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q7" value="はい">はい
+                                <input class="form-check-input" type="radio" name="q7" value="はい"
+                                    <?php if($data && $data->q7 == "はい"){
+                                        echo("checked");
+                                    }
+                                    ?>>はい
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q7" value="いいえ">いいえ
+                                <input class="form-check-input" type="radio" name="q7" value="いいえ"
+                                    <?php if($data && $data->q7 == "いいえ"){
+                                        echo("checked");
+                                    }
+                                    ?>>いいえ
                             </label>
                         </div>
                     </div>
@@ -139,12 +198,20 @@
                     <div class="row">
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q8" value="はい">はい
+                                <input class="form-check-input" type="radio" name="q8" value="はい"
+                                    <?php if($data && $data->q8 == "はい"){
+                                        echo("checked");
+                                    }
+                                    ?>>はい
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q8" value="いいえ">いいえ
+                                <input class="form-check-input" type="radio" name="q8" value="いいえ"
+                                    <?php if($data && $data->q8 == "いいえ"){
+                                        echo("checked");
+                                    }
+                                    ?>>いいえ
                             </label>
                         </div>
                     </div>
@@ -155,12 +222,20 @@
                     <div class="row">
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q9" value="はい">はい
+                                <input class="form-check-input" type="radio" name="q9" value="はい"
+                                    <?php if($data && $data->q9 == "はい"){
+                                        echo("checked");
+                                    }
+                                    ?>>はい
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q9" value="いいえ">いいえ
+                                <input class="form-check-input" type="radio" name="q9" value="いいえ"
+                                    <?php if($data && $data->q9 == "いいえ"){
+                                        echo("checked");
+                                    }
+                                    ?>>いいえ
                             </label>
                         </div>
                     </div>
@@ -171,12 +246,20 @@
                     <div class="row">
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q10" value="はい">はい
+                                <input class="form-check-input" type="radio" name="q10" value="はい"
+                                    <?php if($data && $data->q10 == "はい"){
+                                        echo("checked");
+                                    }
+                                    ?>>はい
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q10" value="いいえ">いいえ
+                                <input class="form-check-input" type="radio" name="q10" value="いいえ"
+                                    <?php if($data && $data->q10 == "いいえ"){
+                                        echo("checked");
+                                    }
+                                    ?>>いいえ
                             </label>
                         </div>
                     </div>
@@ -186,12 +269,20 @@
                     <div class="row">
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q11" value="はい">はい
+                                <input class="form-check-input" type="radio" name="q11" value="はい"
+                                    <?php if($data && $data->q11 == "はい"){
+                                        echo("checked");
+                                    }
+                                    ?>>はい
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q11" value="いいえ">いいえ
+                                <input class="form-check-input" type="radio" name="q11" value="いいえ"
+                                    <?php if($data && $data->q11 == "いいえ"){
+                                        echo("checked");
+                                    }
+                                    ?>>いいえ
                             </label>
                         </div>
                     </div>
@@ -201,12 +292,20 @@
                     <div class="row">
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q12" value="はい">はい
+                                <input class="form-check-input" type="radio" name="q12" value="はい"
+                                    <?php if($data && $data->q12 == "はい"){
+                                        echo("checked");
+                                    }
+                                    ?>>はい
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q12" value="いいえ">いいえ
+                                <input class="form-check-input" type="radio" name="q12" value="いいえ"
+                                    <?php if($data && $data->q12 == "いいえ"){
+                                        echo("checked");
+                                    }
+                                    ?>>いいえ
                             </label>
                         </div>
                     </div>
@@ -216,12 +315,20 @@
                     <div class="row">
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q13" value="はい">はい
+                                <input class="form-check-input" type="radio" name="q13" value="はい"
+                                    <?php if($data && $data->q13 == "はい"){
+                                        echo("checked");
+                                    }
+                                    ?>>はい
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q13" value="いいえ">いいえ
+                                <input class="form-check-input" type="radio" name="q13" value="いいえ"
+                                    <?php if($data && $data->q13 == "いいえ"){
+                                        echo("checked");
+                                    }
+                                    ?>>いいえ
                             </label>
                         </div>
                     </div>
@@ -231,12 +338,20 @@
                     <div class="row">
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q14" value="はい">はい
+                                <input class="form-check-input" type="radio" name="q14" value="はい"
+                                    <?php if($data && $data->q14 == "はい"){
+                                        echo("checked");
+                                    }
+                                    ?>>はい
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q14" value="いいえ">いいえ
+                                <input class="form-check-input" type="radio" name="q14" value="いいえ"
+                                    <?php if($data && $data->q14 == "いいえ"){
+                                        echo("checked");
+                                    }
+                                    ?>>いいえ
                             </label>
                         </div>
                     </div>
@@ -247,12 +362,20 @@
                     <div class="row">
                         <div class="form-check form-check-inline ml-5">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q15" value="はい">はい
+                                <input class="form-check-input" type="radio" name="q15" value="はい"
+                                    <?php if($data && $data->q15 == "はい"){
+                                        echo("checked");
+                                    }
+                                    ?>>はい
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" name="q15" value="いいえ">いいえ
+                                <input class="form-check-input" type="radio" name="q15" value="いいえ"
+                                    <?php if($data && $data->q15 == "いいえ"){
+                                        echo("checked");
+                                    }
+                                    ?>>いいえ
                             </label>
                         </div>
                     </div>
@@ -262,7 +385,10 @@
                     <!-- <textarea class="form-control" name="content" rows="3" placeholder="内容を入力してください"></textarea> -->
                     <div class="col-md-3">
                         <input type="number" step="0.1" class="form-control temperature-textarea" name="content"
-                            rows="20">{{ old('temperature') }}
+                            rows="20" value="{{ $data -> content }}"
+                         
+                            >{{ old('temperature') }}
+                            
                         </input>
                     </div>
                     <div class="col-md-7">
@@ -271,7 +397,6 @@
                     <!-- </h5> -->
                     </div>
                 </div>
-                
                 
                 <div class="form-group row">
                     <div class="col-md-10">
@@ -287,8 +412,7 @@
                 </div>
                 <!-- </dl> -->
             </form>
-            @endsection
         </div>
     </div>
 </div>
-    
+@endsection
